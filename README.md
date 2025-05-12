@@ -1,16 +1,9 @@
-# run_app
+# run_app 🏃‍♂️
 
-A new Flutter project.
+Flutter製ランニング記録アプリ。位置情報、ラップ、CSV出力機能付き。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 機能
+- 位置のリアルタイム記録
+- ラップ・一時停止・再開
+- 履歴の閲覧＆CSV出力
+- Google Maps 表示付き
