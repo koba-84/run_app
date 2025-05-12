@@ -1,0 +1,30 @@
+name: Build & Release APK
+
+on:
+  push:
+    tags:
+      - 'v*'  # v1.0, v1.1などのタグpush時に実行
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.19.6'  # 任意のFlutterバージョンに合わせる
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Upload release artifact
+        uses: softprops/action-gh-release@v1
+        with:
+          files: build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
