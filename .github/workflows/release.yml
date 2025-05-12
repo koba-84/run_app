@@ -15,12 +15,13 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.19.6'
+          channel: stable
 
       - name: Check Flutter version
         run: flutter --version
 
-      - name: Clear pub cache
-        run: flutter pub cache repair || true
+      - name: Clean
+        run: flutter clean
 
       - name: Install dependencies
         run: flutter pub get
