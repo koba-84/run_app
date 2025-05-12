@@ -14,8 +14,9 @@ jobs:
 
       - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.6'
-          channel: stable
+          flutter-version: '3.22.0'
+          channel: beta
+
 
       - name: Check Flutter version
         run: flutter --version
